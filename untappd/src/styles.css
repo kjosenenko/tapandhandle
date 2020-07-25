@@ -1,0 +1,13 @@
+a {
+    color: #D8232A;
+    text-decoration: none;
+}
+a:hover {
+    color: #D8232A;
+    text-decoration: underline;
+}
+.nav-link.active {
+    color: white !important;
+    background-color: #D8232A !important;
+}
+

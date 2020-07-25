@@ -1,0 +1,31 @@
+img {
+    width: auto;
+    height: 100px;
+}
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+.full {
+    color: #FDDA00;
+}
+.half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #FDDA00;
+}
+h1 {
+    color: black;
+}
+h3 {
+    color: #D8232A;
+}
+.card {
+    border: 0px;
+}
+#descriptionArea {
+    padding-left: 25px;
+}

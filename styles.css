@@ -1,0 +1,86 @@
+body {
+    background: url("beerTaps.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+nav {
+    background-color: white !important;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: black;
+    font-weight: bold;
+}
+b {
+    font-size: 120%;
+}
+i {
+    font-size: 85%;
+}
+.active {
+    text-decoration: underline;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+}
+.centerNav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+.jumbotron {
+    margin-top: 30px;
+    background-color: white !important;
+    /* color: white; */
+    /* background:rgba(0,0,0,0.75); */
+}
+.price {
+    float: right;
+}
+.double {
+    border-style: double;
+}
+.groove {
+    border-right-style: groove;
+}
+.btn-link {
+    color: black !important;
+    font-weight: bold;
+    font-size: 120%;
+}
+.btn-link:hover {
+    text-decoration: none;
+}
+.btn-link:enabled {
+    text-decoration: none;
+}
+.whiteSpace {
+    white-space: normal;
+}
+#footer {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#map {
+    height: 120px;
+}
+#aboutCarousel {
+    max-height: 600px;
+}
+[data-toggle="collapse"] .fa:before {
+    content: "\f139";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f13a";
+}

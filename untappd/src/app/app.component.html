@@ -1,0 +1,85 @@
+<div class="container">
+  <ngb-tabset type="pills">
+    <ngb-tab >
+      <ng-template ngbTabTitle><h2>Draft List</h2></ng-template>
+      <ng-template ngbTabContent>
+        <!-- content here -->
+        <hr class="my-4">
+        <div class="text-center">
+            <h1>Draft Beers</h1>
+        </div>
+        <div *ngFor="let section of draftList.sections">
+          <hr class="my-4">
+          <h3><em>{{ section.name }}</em></h3>
+          <div *ngFor="let item of section.items">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="{{item.label_image}}" title="{{item.name}}"/>
+                  </div>
+                  <div id="descriptionArea" class="col-md-10">
+                    <div class="row">
+                      <h5 class="card-title"><a href="http://untappd.com/b/{{item.untappd_beer_slug}}/{{item.untappd_id}}" title="{{item.name}}" target="_blank"> {{item.name}}</a></h5>
+                      <h5 class="card-title"><pre> {{item.style}}</pre></h5>
+                    </div>
+                    <div class="card-text">{{item.abv}}% ABV
+                       <a href="http://untappd.com/brewery/{{item.untappd_brewery_id}}" title="{{item.brewery}}" target="_blank"> {{item.brewery}}</a>
+                         {{item.brewery_location}}
+                      <ng-template #t let-fill="fill">
+  <span class="star" [class.full]="fill === 100">
+    <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+  </span>
+                      </ng-template>
+                      <ngb-rating [(rate)]="item.rating" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><h2>Bottle List</h2></ng-template>
+      <ng-template ngbTabContent>
+        <!-- content here -->
+        <hr class="my-4">
+        <div class="text-center"><h1>Bottled Beers</h1></div>
+        <div *ngFor="let section of bottleList.sections">
+          <hr class="my-4">
+          <h3><em>{{ section.name }}</em></h3>
+          <div *ngFor="let item of section.items">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="{{item.label_image}}" title="{{item.name}}"/>
+                  </div>
+                  <div id="descriptionArea" class="col-md-10">
+                    <div class="row">
+                      <h5 class="card-title"><a href="http://untappd.com/b/{{item.untappd_beer_slug}}/{{item.untappd_id}}" title="{{item.name}}" target="_blank"> {{item.name}}</a></h5>
+                      <h5 class="card-title"><pre> {{item.style}}</pre></h5>
+                    </div>
+                    <div class="card-text">{{item.abv}}% ABV
+                      <a href="http://untappd.com/brewery/{{item.untappd_brewery_id}}" title="{{item.brewery}}" target="_blank"> {{item.brewery}}</a>
+                      {{item.brewery_location}}
+                      <ng-template #t let-fill="fill">
+  <span class="star" [class.full]="fill === 100">
+    <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+  </span>
+                      </ng-template>
+                      <ngb-rating [(rate)]="item.rating" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
